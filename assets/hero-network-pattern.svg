@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800" fill="none">
+  <defs>
+    <linearGradient id="routeLineGrad" x1="0" y1="0" x2="1440" y2="800" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#18C58B" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#0AA875" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#063D35" stop-opacity="0.05"/>
+    </linearGradient>
+    <radialGradient id="hubGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#18C58B" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#063D35" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background Transit Arcs -->
+  <path d="M-100 200 C300 150, 600 450, 1100 320 C1300 270, 1450 380, 1600 350" stroke="url(#routeLineGrad)" stroke-width="2" stroke-dasharray="6 8"/>
+  <path d="M-50 480 C250 380, 520 620, 950 490 C1200 410, 1380 560, 1550 510" stroke="url(#routeLineGrad)" stroke-width="1.5"/>
+  <path d="M200 850 C480 600, 750 300, 1250 220 C1400 190, 1500 240, 1600 210" stroke="url(#routeLineGrad)" stroke-width="1.5" stroke-dasharray="4 6"/>
+  <path d="M100 -50 C350 250, 680 180, 1050 450 C1250 600, 1400 700, 1500 750" stroke="url(#routeLineGrad)" stroke-width="1"/>
+
+  <!-- Subtle Network Hub Points -->
+  <g opacity="0.75">
+    <circle cx="280" cy="380" r="40" fill="url(#hubGlow)"/>
+    <circle cx="280" cy="380" r="4" fill="#18C58B"/>
+    <circle cx="280" cy="380" r="10" stroke="#18C58B" stroke-width="1" stroke-opacity="0.4"/>
+
+    <circle cx="680" cy="290" r="50" fill="url(#hubGlow)"/>
+    <circle cx="680" cy="290" r="5" fill="#18C58B"/>
+    <circle cx="680" cy="290" r="14" stroke="#18C58B" stroke-width="1" stroke-opacity="0.4"/>
+
+    <circle cx="1050" cy="450" r="60" fill="url(#hubGlow)"/>
+    <circle cx="1050" cy="450" r="6" fill="#18C58B"/>
+    <circle cx="1050" cy="450" r="16" stroke="#18C58B" stroke-width="1.5" stroke-opacity="0.5"/>
+
+    <circle cx="1280" cy="260" r="35" fill="url(#hubGlow)"/>
+    <circle cx="1280" cy="260" r="4" fill="#0AA875"/>
+
+    <circle cx="450" cy="580" r="4" fill="#0AA875"/>
+    <circle cx="890" cy="520" r="4" fill="#18C58B"/>
+  </g>
+
+  <!-- Vector coordinate crosses -->
+  <g stroke="#18C58B" stroke-opacity="0.2" stroke-width="1">
+    <path d="M200 150 v10 M195 155 h10"/>
+    <path d="M850 120 v10 M845 125 h10"/>
+    <path d="M1200 650 v10 M1195 655 h10"/>
+    <path d="M500 700 v10 M495 705 h10"/>
+  </g>
+</svg>

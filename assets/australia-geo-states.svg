@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 740" fill="none" class="australia-geo-svg" id="ausGeoSvg">
+  <defs>
+    <filter id="geo-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+    <filter id="geo-vic-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#082E29" flood-opacity="0.6"/>
+    </filter>
+    <filter id="geo-pin-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.45)"/>
+    </filter>
+    <style>
+      .geo-state {
+        cursor: pointer;
+        transition: filter 0.2s ease;
+      }
+      .geo-state:hover {
+        filter: brightness(1.08) drop-shadow(0 0 8px rgba(24,197,139,0.5));
+      }
+      .geo-pin {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+      .geo-pin:hover {
+        transform: scale(1.15);
+        transform-origin: center;
+      }
+    </style>
+  </defs>
+
+  <!-- Crisp Clean Card Plate -->
+  <rect width="760" height="740" rx="16" fill="#F4F8F6"/>
+
+  <!-- Surrounding Ocean Atmosphere Labels -->
+  <text x="60" y="330" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#88A39C" letter-spacing="2">INDIAN OCEAN</text>
+  <text x="625" y="220" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#88A39C" letter-spacing="2">CORAL SEA</text>
+  <text x="640" y="610" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#88A39C" letter-spacing="2">TASMAN SEA</text>
+  <text x="280" y="660" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#88A39C" letter-spacing="2">SOUTHERN OCEAN</text>
+  <text x="320" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#88A39C" letter-spacing="2">TIMOR &amp; ARAFURA SEAS</text>
+
+  <!-- Surrounding Countries indicated in Image 1 -->
+  <g fill="#9CB5AE" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700">
+    <text x="260" y="32" font-size="11" letter-spacing="4">INDONESIA</text>
+    <text x="310" y="44" font-size="8">TIMOR-LESTE</text>
+    <text x="630" y="32" font-size="10" letter-spacing="1">PAPUA NEW GUINEA</text>
+  </g>
+
+  <!-- ========================================================================
+       7 STATES + ACT OUTLINES (Solid Colors & White Borders from Image 1)
+       ======================================================================== -->
+  
+  <!-- 1. WESTERN AUSTRALIA (WA - Yellow) -->
+  <g class="geo-state" id="geoWA" data-code="wa">
+    <path d="M 295,134 L 293,134 L 292,137 L 294,147 L 285,148 L 284,146 L 274,147 L 273,145 L 267,144 L 263,140 L 262,136 L 256,132 L 250,131 L 248,128 L 239,133 L 228,133 L 226,131 L 224,133 L 224,137 L 221,139 L 221,143 L 213,146 L 215,153 L 210,154 L 208,160 L 202,161 L 201,168 L 204,173 L 204,177 L 199,179 L 190,177 L 188,179 L 186,188 L 189,189 L 189,194 L 184,195 L 183,189 L 181,189 L 180,185 L 177,184 L 175,185 L 171,194 L 166,196 L 166,219 L 162,224 L 160,224 L 160,227 L 157,229 L 157,235 L 146,248 L 127,257 L 116,256 L 110,261 L 109,264 L 96,267 L 90,274 L 75,271 L 73,276 L 69,278 L 65,284 L 58,287 L 56,294 L 46,299 L 42,304 L 38,304 L 34,301 L 31,304 L 29,322 L 33,331 L 33,337 L 30,338 L 29,352 L 32,355 L 32,359 L 35,359 L 37,364 L 40,366 L 40,371 L 33,374 L 29,374 L 27,371 L 26,379 L 31,382 L 34,389 L 45,398 L 45,401 L 48,403 L 48,407 L 52,408 L 52,415 L 61,424 L 62,429 L 65,430 L 70,437 L 74,459 L 82,470 L 80,485 L 87,485 L 90,488 L 91,511 L 89,513 L 81,514 L 86,530 L 92,529 L 102,537 L 126,537 L 128,535 L 135,536 L 135,533 L 139,532 L 139,529 L 144,523 L 151,523 L 153,521 L 153,517 L 157,513 L 167,513 L 168,511 L 179,507 L 191,507 L 192,510 L 197,510 L 199,506 L 207,506 L 208,508 L 211,508 L 212,506 L 216,506 L 218,504 L 222,491 L 225,490 L 226,487 L 235,487 L 237,482 L 247,478 L 248,473 L 269,473 L 274,470 L 279,471 L 285,466 L 294,464 Z" fill="#FED85C" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" filter="url(#geo-shadow)"/>
+    <text x="180" y="375" font-family="'Plus Jakarta Sans', sans-serif" font-size="13.5" font-weight="800" fill="#1C2826" text-anchor="middle" letter-spacing="1">WESTERN AUSTRALIA</text>
+  </g>
+
+  <!-- 2. NORTHERN TERRITORY (NT - Coral) -->
+  <g class="geo-state" id="geoNT" data-code="nt">
+    <path d="M 305,85 L 303,89 L 304,91 L 314,91 L 315,96 L 313,103 L 309,104 L 309,109 L 305,110 L 305,121 L 299,123 L 299,128 L 296,132 L 296,353 L 446,353 L 446,176 L 443,172 L 439,172 L 438,169 L 434,169 L 432,165 L 419,160 L 417,156 L 405,149 L 405,144 L 413,134 L 415,128 L 421,129 L 421,135 L 423,137 L 431,137 L 431,127 L 428,125 L 415,125 L 414,120 L 425,116 L 427,108 L 432,102 L 432,98 L 428,96 L 425,91 L 421,93 L 407,91 L 405,95 L 398,95 L 392,92 L 381,92 L 375,87 L 366,88 L 365,86 L 350,85 L 349,96 L 330,98 L 324,94 L 324,90 L 329,85 Z" fill="#EE8569" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" filter="url(#geo-shadow)"/>
+    <text x="370" y="240" font-family="'Plus Jakarta Sans', sans-serif" font-size="12.5" font-weight="800" fill="#1C2826" text-anchor="middle" letter-spacing="0.5">NORTHERN TERRITORY</text>
+  </g>
+
+  <!-- 3. SOUTH AUSTRALIA (SA - Cyan) -->
+  <g class="geo-state" id="geoSA" data-code="sa">
+    <path d="M 296,354 L 296,461 L 306,458 L 336,457 L 349,466 L 356,464 L 363,469 L 373,471 L 377,474 L 377,482 L 380,487 L 386,487 L 389,491 L 389,496 L 395,501 L 394,513 L 396,513 L 401,520 L 406,520 L 407,511 L 416,500 L 427,496 L 430,490 L 434,490 L 435,497 L 431,500 L 429,505 L 429,517 L 421,519 L 419,524 L 421,526 L 432,526 L 434,520 L 439,519 L 442,529 L 439,530 L 437,534 L 432,534 L 430,531 L 416,534 L 413,537 L 419,541 L 429,541 L 431,538 L 438,538 L 440,534 L 451,533 L 459,539 L 462,546 L 462,557 L 460,558 L 460,562 L 468,572 L 469,576 L 473,580 L 481,581 L 487,584 L 487,354 Z" fill="#63C5DA" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" filter="url(#geo-shadow)"/>
+    <text x="395" y="435" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#1C2826" text-anchor="middle" letter-spacing="0.5">SOUTH AUSTRALIA</text>
+  </g>
+
+  <!-- 4. QUEENSLAND (QLD - Sage Green) -->
+  <g class="geo-state" id="geoQLD" data-code="qld">
+    <path d="M 530,85 L 526,99 L 520,104 L 518,123 L 515,128 L 516,157 L 512,163 L 508,183 L 501,192 L 501,197 L 497,201 L 486,203 L 470,193 L 470,185 L 479,180 L 478,178 L 473,178 L 470,181 L 469,186 L 450,182 L 447,178 L 447,353 L 488,354 L 488,417 L 693,417 L 691,384 L 693,381 L 694,368 L 698,366 L 699,360 L 697,357 L 694,364 L 689,365 L 686,362 L 686,356 L 679,351 L 678,343 L 675,340 L 670,339 L 669,332 L 666,328 L 661,327 L 664,313 L 662,307 L 655,307 L 651,303 L 648,306 L 643,305 L 641,281 L 635,273 L 637,264 L 621,255 L 613,246 L 605,244 L 602,239 L 594,233 L 594,209 L 584,187 L 585,178 L 583,176 L 583,157 L 572,148 L 571,144 L 564,144 L 562,146 L 557,145 L 554,134 L 553,112 L 549,106 L 549,99 L 544,96 L 544,85 Z" fill="#82C892" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" filter="url(#geo-shadow)"/>
+    <text x="545" y="285" font-family="'Plus Jakarta Sans', sans-serif" font-size="13.5" font-weight="800" fill="#1C2826" text-anchor="middle" letter-spacing="1">QUEENSLAND</text>
+  </g>
+
+  <!-- 5. NEW SOUTH WALES (NSW - Peach) -->
+  <g class="geo-state" id="geoNSW" data-code="nsw">
+    <path d="M 487,509 L 500,510 L 504,515 L 505,521 L 516,522 L 518,532 L 527,538 L 537,549 L 550,547 L 559,551 L 566,551 L 569,554 L 582,553 L 587,561 L 588,569 L 596,575 L 599,575 L 602,579 L 601,585 L 590,585 L 606,586 L 609,582 L 613,581 L 615,575 L 619,575 L 620,573 L 616,572 L 616,566 L 620,561 L 622,561 L 620,560 L 620,556 L 625,545 L 629,541 L 635,540 L 633,539 L 634,527 L 641,526 L 643,524 L 646,510 L 652,503 L 663,499 L 663,496 L 666,495 L 666,488 L 673,482 L 675,474 L 678,473 L 678,462 L 684,448 L 687,446 L 687,440 L 692,433 L 694,423 L 693,418 L 487,418 Z" fill="#FFB870" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round" filter="url(#geo-shadow)"/>
+    <text x="570" y="470" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#1C2826" text-anchor="middle" letter-spacing="0.5">NEW SOUTH WALES</text>
+
+    <!-- ACT Enclave -->
+    <rect x="598" y="536" width="14" height="14" rx="2" fill="#DC2626" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="612" y1="543" x2="655" y2="550" stroke="#DC2626" stroke-width="1.8"/>
+    <text x="660" y="552" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="900" fill="#111827">CANBERRA</text>
+    <text x="660" y="563" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#4B5563">AUSTRALIAN CAPITAL TERRITORY</text>
+  </g>
+
+  <!-- 6. VICTORIA (VIC - Purple & Highlighted HQ) -->
+  <g class="geo-state active-hq-geo" id="geoVIC" data-code="vic">
+    <path d="M 485,511 L 485,583 L 494,583 L 506,591 L 509,591 L 513,595 L 516,595 L 532,587 L 532,575 L 541,574 L 545,577 L 545,583 L 538,589 L 542,590 L 545,596 L 554,599 L 559,599 L 570,591 L 574,590 L 576,584 L 607,584 L 606,582 L 602,581 L 599,576 L 596,576 L 587,569 L 586,561 L 581,553 L 569,555 L 566,552 L 559,552 L 550,548 L 537,550 L 527,539 L 517,532 L 516,523 L 505,522 L 503,520 L 503,515 L 499,510 Z" fill="#BA9DC9" stroke="#082E29" stroke-width="3.5" stroke-linejoin="round" filter="url(#geo-vic-glow)"/>
+    <text x="535" y="565" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="900" fill="#082E29" text-anchor="middle">VICTORIA</text>
+  </g>
+
+  <!-- 7. TASMANIA (TAS - Blue) -->
+  <g class="geo-state" id="geoTAS" data-code="tas">
+    <path d="M 579,621 L 576,622 L 579,635 L 578,640 L 550,644 L 534,634 L 530,633 L 528,636 L 529,650 L 534,658 L 534,674 L 540,685 L 542,685 L 545,690 L 555,692 L 560,688 L 571,686 L 574,676 L 574,668 L 578,666 L 581,653 L 580,637 L 582,634 L 583,625 Z" fill="#6397DC" stroke="#FFFFFF" stroke-width="2.5" stroke-linejoin="round" filter="url(#geo-shadow)"/>
+    <text x="562" y="718" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#1C2826" text-anchor="middle">TASMANIA</text>
+  </g>
+
+  <!-- ========================================================================
+       CAPITAL CITY NODES & RED PINS (From Image 1)
+       ======================================================================== -->
+  <g class="geo-pins">
+    <!-- Perth -->
+    <g class="geo-pin" transform="translate(93, 479)">
+      <circle cx="0" cy="0" r="6.5" fill="#EF4444" stroke="#FFFFFF" stroke-width="2" filter="url(#geo-pin-shadow)"/>
+      <text x="-12" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="800" fill="#1F2937" text-anchor="end">Perth</text>
+    </g>
+    <!-- Darwin -->
+    <g class="geo-pin" transform="translate(319, 101)">
+      <circle cx="0" cy="0" r="6.5" fill="#EF4444" stroke="#FFFFFF" stroke-width="2" filter="url(#geo-pin-shadow)"/>
+      <text x="-12" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="800" fill="#1F2937" text-anchor="end">Darwin</text>
+    </g>
+    <!-- Adelaide -->
+    <g class="geo-pin" transform="translate(444, 518)">
+      <circle cx="0" cy="0" r="6.5" fill="#EF4444" stroke="#FFFFFF" stroke-width="2" filter="url(#geo-pin-shadow)"/>
+      <text x="-12" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="800" fill="#1F2937" text-anchor="end">Adelaide</text>
+    </g>
+    <!-- Brisbane -->
+    <g class="geo-pin" transform="translate(685, 406)">
+      <circle cx="0" cy="0" r="6.5" fill="#EF4444" stroke="#FFFFFF" stroke-width="2" filter="url(#geo-pin-shadow)"/>
+      <text x="14" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="11.5" font-weight="800" fill="#1F2937" text-anchor="start">Brisbane</text>
+    </g>
+    <!-- Sydney -->
+    <g class="geo-pin" transform="translate(637, 520)">
+      <circle cx="0" cy="0" r="6.5" fill="#EF4444" stroke="#FFFFFF" stroke-width="2" filter="url(#geo-pin-shadow)"/>
+      <text x="14" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#1F2937" text-anchor="start">Sydney</text>
+    </g>
+    <!-- Hobart -->
+    <g class="geo-pin" transform="translate(562, 681)">
+      <circle cx="0" cy="0" r="5.5" fill="#EF4444" stroke="#FFFFFF" stroke-width="2" filter="url(#geo-pin-shadow)"/>
+      <text x="12" y="4" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#1F2937" text-anchor="start">Hobart</text>
+    </g>
+    <!-- Melbourne (VIC) HQ Pin -->
+    <g class="geo-pin-hq" transform="translate(537, 580)">
+      <circle cx="0" cy="0" r="8.5" fill="#082E29" stroke="#18C58B" stroke-width="2.5" filter="url(#geo-vic-glow)"/>
+      <circle cx="0" cy="0" r="3.5" fill="#FFFFFF"/>
+      <g transform="translate(-85, 14)">
+        <rect width="170" height="26" rx="5" fill="#082E29" stroke="#18C58B" stroke-width="1.5"/>
+        <text x="85" y="17" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="900" fill="#FFFFFF" text-anchor="middle">★ MELBOURNE HQ (VIC)</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Big Central AUSTRALIA Title (Matching Image 1) -->
+  <text x="380" y="325" font-family="'Plus Jakarta Sans', sans-serif" font-size="28" font-weight="900" fill="#112724" letter-spacing="16" text-anchor="middle" opacity="0.9">AUSTRALIA</text>
+</svg>

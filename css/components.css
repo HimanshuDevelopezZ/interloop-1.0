@@ -1,0 +1,608 @@
+/* ==========================================================================
+   INTERLOOP LOGISTICS - REUSABLE COMPONENTS & UI ATOMS
+   ========================================================================== */
+
+/* Section Headers */
+.section-header {
+  margin-bottom: var(--space-12);
+}
+
+.section-header.text-center {
+  text-align: center;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extrabold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-widest);
+  color: var(--color-emerald);
+  margin-bottom: var(--space-3);
+  padding: 6px 14px;
+  background-color: var(--color-mint);
+  border-radius: var(--radius-full);
+}
+
+.section-dark .section-eyebrow {
+  background-color: rgba(24, 197, 139, 0.14);
+  color: var(--color-accent);
+  border: 1px solid rgba(24, 197, 139, 0.25);
+}
+
+.section-title {
+  margin-bottom: var(--space-4);
+}
+
+.section-subtitle {
+  font-size: var(--font-size-md);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.section-dark .section-subtitle {
+  color: var(--color-text-light);
+}
+
+/* ================= Buttons ================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 13px 24px;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Primary Button (Emerald Green background) */
+.btn-primary {
+  background-color: var(--color-emerald);
+  color: var(--color-white);
+  box-shadow: var(--shadow-emerald);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-emerald-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(10, 168, 117, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button (Dark Green Outline or Solid) */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary-darkest);
+  border: 1.5px solid var(--color-primary-darkest);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary-darkest);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+/* Dark Section Secondary Button */
+.btn-secondary-dark {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-secondary-dark:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* Outline Emerald */
+.btn-outline-emerald {
+  background-color: transparent;
+  color: var(--color-emerald);
+  border: 1.5px solid var(--color-emerald);
+}
+
+.btn-outline-emerald:hover {
+  background-color: var(--color-emerald);
+  color: var(--color-white);
+}
+
+/* Subtle Text Action Link */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  color: var(--color-emerald);
+  transition: gap var(--transition-fast), color var(--transition-fast);
+}
+
+.text-link:hover {
+  color: var(--color-emerald-hover);
+  gap: var(--space-3);
+}
+
+.section-dark .text-link {
+  color: var(--color-accent);
+}
+
+.section-dark .text-link:hover {
+  color: var(--color-white);
+}
+
+/* Badges & Pills */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  background: var(--color-mint);
+  color: var(--color-primary-darkest);
+}
+
+/* Standard Card Styles */
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-8);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(10, 168, 117, 0.3);
+}
+
+/* Icons */
+.icon-box {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-mint);
+  color: var(--color-emerald);
+  margin-bottom: var(--space-5);
+}
+
+.icon-box svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  background-color: var(--color-primary-darkest);
+  color: var(--color-white);
+  padding: 14px 20px;
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-accent);
+  box-shadow: var(--shadow-xl);
+  font-size: var(--font-size-sm);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all var(--transition-smooth);
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ==========================================================================
+   INTERACTIVE MODAL SYSTEM (Live Tracking, POD & Operations Portal)
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 26, 22, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: var(--z-modal);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.modal-backdrop.open {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-card {
+  background: #082E29;
+  border: 1px solid rgba(24, 197, 139, 0.35);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  position: relative;
+  transform: scale(0.95) translateY(10px);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.open .modal-card {
+  transform: scale(1) translateY(0);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 26px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(6, 61, 53, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.modal-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-title {
+  font-family: var(--font-family-primary);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.modal-close-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D1E4DE;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background: rgba(24, 197, 139, 0.2);
+  border-color: var(--color-accent);
+  color: #FFFFFF;
+}
+
+.modal-body {
+  padding: 26px;
+}
+
+/* Tracking Search Bar inside Modal */
+.tracking-search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.tracking-search-box input {
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.tracking-search-box input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(24, 197, 139, 0.2);
+}
+
+.tracking-status-banner {
+  background: rgba(24, 197, 139, 0.12);
+  border: 1px solid rgba(24, 197, 139, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.tracking-ref-id {
+  font-family: monospace;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.tracking-live-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--color-accent);
+  color: #063D35;
+  padding: 3px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.04em;
+}
+
+/* Step Progression Track */
+.track-progress-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  margin: 30px 0;
+}
+
+.track-progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.track-progress-line-fill {
+  position: absolute;
+  top: 14px;
+  left: 10%;
+  width: 66%;
+  height: 3px;
+  background: var(--color-accent);
+  z-index: 2;
+  transition: width 0.5s ease;
+}
+
+.track-step-node {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.track-step-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #0A332C;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #A4BFB7;
+}
+
+.track-step-node.completed .track-step-circle {
+  background: var(--color-emerald);
+  border-color: var(--color-accent);
+  color: #FFFFFF;
+}
+
+.track-step-node.active .track-step-circle {
+  background: var(--color-accent);
+  border-color: #FFFFFF;
+  color: #063D35;
+  box-shadow: 0 0 14px rgba(24, 197, 139, 0.8);
+}
+
+.track-step-text {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #CFE3DC;
+}
+
+.track-step-time {
+  font-size: 10px;
+  color: #89ABA2;
+}
+
+/* Shipment Details Grid */
+.shipment-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.shipment-detail-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.shipment-detail-label {
+  font-size: 11px;
+  color: #8FAEA6;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.shipment-detail-value {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+/* Sign-on-Glass Proof of Delivery Box (Drivn-style) */
+.pod-certificate-box {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(24, 197, 139, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  margin-top: 20px;
+}
+
+.pod-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pod-title {
+  font-size: 12.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pod-sign-area {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 14px;
+  color: #0A2621;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pod-signer-info {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.pod-signer-name {
+  font-weight: 800;
+  color: #063D35;
+  font-size: 13px;
+}
+
+.pod-signature-render {
+  font-family: 'Brush Script MT', 'Segoe Script', cursive;
+  font-size: 26px;
+  color: #082E29;
+  border-bottom: 1.5px solid #082E29;
+  padding: 0 16px;
+}
+
+.modal-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Header Action Buttons for Track and Portal */
+.header-track-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-accent);
+  background: rgba(24, 197, 139, 0.12);
+  border: 1px solid rgba(24, 197, 139, 0.35);
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.header-track-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+}
+
+.header-track-btn:hover {
+  background: rgba(24, 197, 139, 0.22);
+  color: #FFFFFF;
+  border-color: var(--color-accent);
+}
+
+.header-portal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: #CFE3DC;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 13px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.header-portal-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.4);
+}
