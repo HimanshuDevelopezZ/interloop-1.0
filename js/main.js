@@ -606,8 +606,6 @@
      Australia Network Map Controller (View Switcher & State Coverage HUD)
      -------------------------------------------------------------------------- */
   function initAustraliaNetworkMap() {
-    const switcherBtns = document.querySelectorAll('.map-view-btn');
-    const mapImg = document.getElementById('activeNetworkMapImg');
     const statePills = document.querySelectorAll('.state-coverage-pill');
 
     const stateData = {
@@ -685,6 +683,39 @@
       }
     };
 
+    // Map View Switcher
+    switcherBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const view = btn.getAttribute('data-view');
+        switcherBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if (view === 'neon') {
+          if (mapViewNeon) mapViewNeon.style.display = '';
+          if (mapViewGeo) mapViewGeo.style.display = 'none';
+        } else {
+          if (mapViewNeon) mapViewNeon.style.display = 'none';
+          if (mapViewGeo) mapViewGeo.style.display = '';
+        }
+      });
+    });
+
+    // SVG state interactivity on the neon map
+    const svgStates = document.querySelectorAll('.map-state[data-code]');
+    svgStates.forEach(state => {
+      const code = state.getAttribute('data-code');
+      if (!code || !stateData[code]) return;
+      state.addEventListener('click', () => {
+        // Sync pill active state
+        statePills.forEach(p => p.classList.remove('active'));
+        const matchPill = document.querySelector(`.state-coverage-pill[data-state="${code}"]`);
+        if (matchPill) matchPill.classList.add('active');
+        updateHud(stateData[code]);
+      });
+      state.addEventListener('mouseenter', () => {
+        updateHud(stateData[code]);
+      });
+    });
+
     // State Pills interactivity & HUD update
     statePills.forEach(pill => {
       pill.addEventListener('click', () => {
@@ -726,6 +757,8 @@
       if (fleetEl) fleetEl.textContent = info.fleet;
     }
   }
+
+
 
   /* --------------------------------------------------------------------------
      Global Toast System
