@@ -65,6 +65,40 @@
   filter: drop-shadow(0 4px 14px rgba(24, 197, 139, 0.35));
 }
 
+/* Stacked company name lockup */
+.brand-name-lockup {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  user-select: none;
+}
+
+.brand-name-line1 {
+  font-family: var(--font-family-primary);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.brand-name-line2 {
+  font-family: var(--font-family-primary);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--color-accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-logo-link:hover .brand-name-line1 {
+  color: var(--color-accent);
+}
+
+.brand-logo-link:hover .brand-name-line2 {
+  color: var(--color-white);
+}
+
 .site-header.scrolled .brand-logo-img {
   height: 50px;
   max-height: 50px;
@@ -374,6 +408,10 @@
   .brand-logo-img {
     height: 42px;
     max-height: 42px;
+  }
+
+  .brand-name-lockup {
+    display: none;
   }
   
   .header-cta-btn {
