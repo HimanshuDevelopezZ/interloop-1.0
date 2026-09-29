@@ -61,8 +61,6 @@
 }
 
 .brand-logo-link:hover .brand-logo-img {
-  transform: scale(1.03);
-  filter: drop-shadow(0 4px 14px rgba(24, 197, 139, 0.35));
 }
 
 /* Stacked company name lockup */

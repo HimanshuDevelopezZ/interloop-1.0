@@ -14,10 +14,48 @@
 
   function initForm() {
     const form = document.getElementById('quoteSimpleForm');
+    const msgContainer = document.getElementById('formMessageContainer');
+    
     if (form) {
+      // Custom validation for error messages
+      form.addEventListener('invalid', function(e) {
+        e.preventDefault();
+        if (msgContainer) {
+          msgContainer.style.display = 'block';
+          msgContainer.style.backgroundColor = '#fde8e8';
+          msgContainer.style.color = '#d9534f';
+          msgContainer.innerText = 'Error: Please fill in all required fields (*).';
+        }
+      }, true);
+
       form.addEventListener('submit', function(e) {
         e.preventDefault();
-        submitToWhatsApp();
+        
+        try {
+          submitToWhatsApp();
+          
+          if (msgContainer) {
+            msgContainer.style.display = 'block';
+            msgContainer.style.backgroundColor = '#e6f9f2';
+            msgContainer.style.color = '#18c58b';
+            msgContainer.innerText = 'Success! Redirecting you to WhatsApp...';
+            
+            setTimeout(() => {
+              msgContainer.style.display = 'none';
+              form.reset();
+              if(window.uploadedFiles) window.uploadedFiles = [];
+              const fileList = document.getElementById('quoteFileList');
+              if(fileList) fileList.innerHTML = '';
+            }, 5000);
+          }
+        } catch (error) {
+          if (msgContainer) {
+            msgContainer.style.display = 'block';
+            msgContainer.style.backgroundColor = '#fde8e8';
+            msgContainer.style.color = '#d9534f';
+            msgContainer.innerText = 'Error: Something went wrong. Please try again.';
+          }
+        }
       });
     }
   }

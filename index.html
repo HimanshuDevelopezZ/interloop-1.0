@@ -311,6 +311,10 @@
                   <div class="about-slide"><img src="imgs/WhatsApp Image 2026-09-13 at 5.21.54 PM (2).jpeg" alt="Cargo solutions" loading="lazy"></div>
                   <div class="about-slide"><img src="imgs/WhatsApp Image 2026-09-13 at 5.21.54 PM.jpeg" alt="Logistics fleet" loading="lazy"></div>
                   <div class="about-slide"><img src="imgs/WhatsApp Image 2026-09-13 at 5.21.55 PM.jpeg" alt="Interloop in motion" loading="lazy"></div>
+                  <div class="about-slide"><img src="imgs/WhatsApp Image 2026-09-29 at 4.26.54 PM.jpeg" alt="Recent logistics operations" loading="lazy"></div>
+                  <div class="about-slide"><img src="imgs/WhatsApp Image 2026-09-29 at 4.26.55 PM.jpeg" alt="Recent logistics operations" loading="lazy"></div>
+                  <div class="about-slide"><img src="imgs/WhatsApp Image 2026-09-29 at 4.26.56 PM.jpeg" alt="Recent logistics operations" loading="lazy"></div>
+                  <div class="about-slide"><img src="imgs/WhatsApp Image 2026-09-29 at 4.26.57 PM.jpeg" alt="Recent logistics operations" loading="lazy"></div>
                 </div>
 
                 <!-- Prev / Next Arrows -->
@@ -957,11 +961,11 @@
             <div class="form-grid-2" style="margin-bottom: 20px;">
               <div class="form-group">
                 <label class="form-label" for="pickupAddress">Pickup Full Address <span class="req">*</span></label>
-                <textarea id="pickupAddress" class="form-textarea" placeholder="e.g. 12 Example St, Clayton South VIC 3169" required rows="3" style="resize: vertical;"></textarea>
+                <textarea id="pickupAddress" class="form-textarea" required rows="3" style="resize: vertical;"></textarea>
               </div>
               <div class="form-group">
                 <label class="form-label" for="deliveryAddress">Delivery Full Address <span class="req">*</span></label>
-                <textarea id="deliveryAddress" class="form-textarea" placeholder="e.g. 14 Logistics Way, Eastern Creek NSW 2766" required rows="3" style="resize: vertical;"></textarea>
+                <textarea id="deliveryAddress" class="form-textarea" required rows="3" style="resize: vertical;"></textarea>
               </div>
             </div>
 
@@ -969,11 +973,11 @@
             <div class="form-grid-2" style="margin-bottom: 20px;">
               <div class="form-group">
                 <label class="form-label" for="custFullName">Full Name <span class="req">*</span></label>
-                <input type="text" id="custFullName" class="form-input" placeholder="e.g. Leo Frank" required>
+                <input type="text" id="custFullName" class="form-input" required>
               </div>
               <div class="form-group">
                 <label class="form-label" for="custContact">Contact (Phone / Email) <span class="req">*</span></label>
-                <input type="text" id="custContact" class="form-input" placeholder="e.g. 0468 201 066 or name@company.com" required>
+                <input type="text" id="custContact" class="form-input" required>
               </div>
             </div>
 
@@ -982,13 +986,13 @@
               <label class="form-label">Freight Dimensions (L × W × H)</label>
               <div class="form-grid-3">
                 <div class="form-group">
-                  <input type="number" id="dimLength" class="form-input" placeholder="Length (cm)">
+                  <input type="number" id="dimLength" class="form-input">
                 </div>
                 <div class="form-group">
-                  <input type="number" id="dimWidth" class="form-input" placeholder="Width (cm)">
+                  <input type="number" id="dimWidth" class="form-input">
                 </div>
                 <div class="form-group">
-                  <input type="number" id="dimHeight" class="form-input" placeholder="Height (cm)">
+                  <input type="number" id="dimHeight" class="form-input">
                 </div>
               </div>
             </div>
@@ -997,11 +1001,11 @@
             <div class="form-grid-2" style="margin-bottom: 20px;">
               <div class="form-group">
                 <label class="form-label" for="dimWeight">Weight (kg)</label>
-                <input type="number" id="dimWeight" class="form-input" placeholder="e.g. 450">
+                <input type="number" id="dimWeight" class="form-input">
               </div>
               <div class="form-group">
                 <label class="form-label" for="materialPacking">Material &amp; How It's Packed</label>
-                <input type="text" id="materialPacking" class="form-input" placeholder="e.g. Steel parts, palletised &amp; wrapped">
+                <input type="text" id="materialPacking" class="form-input">
               </div>
             </div>
 
@@ -1018,6 +1022,9 @@
               </div>
               <div class="file-preview-list" id="quoteFileList"></div>
             </div>
+
+            <!-- Messages -->
+            <div id="formMessageContainer" style="display: none; padding: 12px; margin-bottom: 20px; border-radius: 4px; text-align: center; font-weight: bold;"></div>
 
             <!-- Submit -->
             <div style="text-align: center;">
