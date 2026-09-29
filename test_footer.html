@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <style>
+    .footer-brand-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      height: auto;
+      padding: 0;
+    }
+    .footer-brand .brand-name-lockup {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      transform: translateY(5px);
+      line-height: 1.15;
+    }
+    .footer-brand .brand-name-line1 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--color-white);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .footer-brand .brand-name-line2 {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--color-accent);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .footer-brand .footer-logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.25));
+      transition: transform var(--transition-fast), filter var(--transition-fast);
+    }
+  </style>
+</head>
+<body style="background: #082E29; margin: 0; padding: 40px 0;">
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo-link footer-brand-lockup" aria-label="Interloop Logistics - Home">
+            <img src="assets/interloop_logo_main.png" alt="Interloop Logistics Pty Ltd" class="footer-logo-img">
+            <span class="brand-name-lockup" aria-hidden="true">
+              <span class="brand-name-line1">Interloop</span>
+              <span class="brand-name-line2">Logistics</span>
+            </span>
+          </a>
+          <p>
+            Premium Australian logistics, freight management, and road transport coordination engineered for business reliability.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#network">Network</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Road Freight</a></li>
+            <li><a href="#services">Full Truck Load (FTL)</a></li>
+            <li><a href="#services">Less Than Truck Load</a></li>
+            <li><a href="#services">Pallet Freight</a></li>
+            <li><a href="#services">Machinery Transport</a></li>
+            <li><a href="#services">Oversized Cargo</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Operations</h4>
+          <p style="font-size: 13px; color: #D1E4DE; line-height: 1.6; margin-bottom: 12px;">
+            <strong>Melbourne VIC Head Office</strong><br>
+            Clayton South, VIC 3169<br>
+            Phone: <a href="tel:+61468201066" style="color: var(--color-accent);">+61 468 201 066</a><br>
+            Email: <a href="mailto:operations@interloopco.com" style="color: var(--color-accent);">operations@interloopco.com</a>
+          </p>
+          <a href="#quote-section" class="btn btn-primary" style="padding: 10px 20px; font-size: 12px; width: 100%; text-align: center;">GET A QUOTE →</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
