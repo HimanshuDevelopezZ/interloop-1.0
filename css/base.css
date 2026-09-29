@@ -38,6 +38,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  width: 100%;
   background-color: var(--color-offwhite);
   color: var(--color-text-body);
 }
@@ -49,6 +50,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-extrabold);
   line-height: 1.18;
   letter-spacing: var(--letter-spacing-tight);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 h1 {
